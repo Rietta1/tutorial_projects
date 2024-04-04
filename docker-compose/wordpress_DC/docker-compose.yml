@@ -11,46 +11,29 @@ services:
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: loretta
-      WORDPRESS_DB_PASSWORD_FILE: shuga
+      WORDPRESS_DB_PASSWORD: shuga
       WORDPRESS_DB_NAME: wpdb
 
     volumes:
       - wordpress:/var/www/html
 
   db:
-    image: mysql:5.7
+    image: mysql:8.0
+    restart: always
     ports:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: wpdb
       MYSQL_USER: loretta
-      MYSQL_PASSWORD_FILE: shuga
-      MYSQL_ROOT_PASSWORD_FILE: shuga
-      
+      MYSQL_PASSWORD: shuga
+      MYSQL_ROOT_PASSWORD: '1'
+
     volumes:
     
       - db:/var/lib/mysql
     networks:
       - default
 
-#   phpmyadmin:
-#     image: phpmyadmin/phpmyadmin
-#     links:
-#       - db:db
-#     ports:
-#       - 8282:80
-#     environment:
-#       MYSQL_USER: ranjit
-#       MYSQL_PASSWORD_FILE: shuga
-#       MYSQL_ROOT_PASSWORD_FILE: shuga
-#     secrets:
-#       - db_password
-#       - db_root_password
-# secrets:
-#    db_password:
-#      file: db_password.txt
-#    db_root_password:
-#      file: db_root_password.txt
-# volumes:
-#   wordpress:
-#   db:
+volumes:
+  wordpress:
+  db:
