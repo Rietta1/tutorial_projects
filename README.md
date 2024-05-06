@@ -1,2 +1,0 @@
-# tutorial_projects
-test
