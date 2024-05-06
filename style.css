@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Featured Listings */
+.featured-listings {
+    padding: 2rem;
+}
+
+.listings-grid {
+    display: flex;
+    gap: 2rem;
+}
+
+.listing {
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.listing img {
+    width: 100%;
+    height: auto;
+}
+
+/* About Section */
+.about-section, .team-grid {
+    padding: 2rem;
+}
+
+.team-member {
+    margin-bottom: 1rem;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 2rem;
+}
+
+.contact-section form {
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.contact-section label, 
+.contact-section input, 
+.contact-section textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-info {
+    padding: 1rem;
+}
+
+.footer-info .social-media a {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-text {
+        font-size: 1.5rem;
+    }
+    .listings-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Adding transition to buttons */
+.btn {
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
